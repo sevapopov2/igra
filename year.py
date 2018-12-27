@@ -46,10 +46,15 @@ class year:
     def daychange(self):
         self.day = self.day + 1
         if self.breakdayscount == 0:
-            print('Инструмент сломался: ', randomevent.instrumentbreak())
-            self.breakdayscount = random.randint(1, 7)
-        print('Ваш инструмент починится через', self.breakdayscount, 'дней')
-        self.breakdayscount = self.breakdayscount - 1
+            ib = randomevent.instrumentbreak()
+            if (ib):
+                print('Инструмент сломался: ', ib)
+                self.breakdayscount = random.randint(1, 7)
+
+        if self.breakdayscount > 0:
+            self.breakdayscount = self.breakdayscount - 1
+            print('Ваш инструмент починится через',self.breakdayscount, 'дней')
+            
         print('Тип недели ', self.holidays)
         if self.day > 7:
             self.weekchange()
