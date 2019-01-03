@@ -8,6 +8,10 @@ class year:
     weeksleft = 0
     weekscount = 3
     breakdayscount = 0
+    ibmoneycount = 0
+#Число денег, выдаваемое студенту, когда инструмент ломается
+    ibmoneyneeded = 0
+#Число денег, необходимое на починку инструмента
     holidaysweek = 1
     quarter = 1
     holidays = 0
@@ -50,6 +54,10 @@ class year:
             if (ib):
                 print('Инструмент сломался: ', ib)
                 self.breakdayscount = random.randint(1, 7)
+                self.ibmoneycount = random.randint(0, 100)
+                print('Поскольку ваш инструмент сломался, мы дадим вам возможность его починить. Вам выдали', self.ibmoneycount, 'рублей для этого')
+                self.ibmoneyneeded = random.randint(1, 100)
+                print('На починку вашего инструмента необходимо заплатить', self.ibmoneyneeded, 'рублей')
 
         if self.breakdayscount > 0:
             self.breakdayscount = self.breakdayscount - 1

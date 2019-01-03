@@ -47,7 +47,7 @@ class Student:
 #            print('У вас каникулы. Вы не можете учиться.')
 
     def study_rehers(self):
-        if randomevent.instrumentbreak():
+        if studyyear.ib:
             print('У вас же инструмент сломался! Вы не можете репитировать!')
         else:
             self.rehers_count = self.rehers_count + 1
@@ -74,7 +74,7 @@ class Student:
             self.studyyear.daychange()
 
     def take_rest(self):
-        self.rest_count=self.rest_count + 1
+        self.rest_count = self.rest_count + 1
         if self.tired_level >= 10:
             self.tired_level = self.tired_level - 10
         else:
