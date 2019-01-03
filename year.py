@@ -57,11 +57,16 @@ class year:
                 self.ibmoneycount = random.randint(0, 100)
                 print('Поскольку ваш инструмент сломался, мы дадим вам возможность его починить. Вам выдали', self.ibmoneycount, 'рублей для этого')
                 self.ibmoneyneeded = random.randint(1, 100)
-                print('На починку вашего инструмента необходимо заплатить', self.ibmoneyneeded, 'рублей')
+                print('За починку вашего инструмента необходимо заплатить', self.ibmoneyneeded, 'рублей')
 
         if self.breakdayscount > 0:
-            self.breakdayscount = self.breakdayscount - 1
-            print('Ваш инструмент починится через',self.breakdayscount, 'дней')
+            if self.ibmoneycount >= self.ibmoneyneeded:
+                self.ibmoneycount = self.ibmoneycount - self.ibmoneyneeded
+                self.breakdayscount = 0
+                print('Вы заплатили', self.ibmoneycount, 'рублей. Теперь ваш инструмент в порядке')
+                if self.ibmoneycount < self.ibmoneyneeded:
+                self.breakdayscount = self.breakdayscount - 1
+                print('Ваш инструмент починится через',self.breakdayscount, 'дней')
             
         print('Тип недели ', self.holidays)
         if self.day > 7:
