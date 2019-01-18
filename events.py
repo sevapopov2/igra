@@ -6,6 +6,8 @@ class randomevent:
             return True
         else:
             return False
+
+    @staticmethod
     def gettingmoney():
         if random.random >= 0.5:
             return True
