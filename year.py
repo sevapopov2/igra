@@ -10,6 +10,7 @@ class year:
     breakdayscount = 0
     ibmoneycount = 0
 #Число денег, выдаваемое студенту, когда инструмент ломается
+
     ibmoneyneeded = 0
 #Число денег, необходимое на починку инструмента
     holidaysweek = 1
