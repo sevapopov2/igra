@@ -64,8 +64,8 @@ class year:
             if self.ibmoneycount >= self.ibmoneyneeded:
                 self.ibmoneycount = self.ibmoneycount - self.ibmoneyneeded
                 self.breakdayscount = 0
-                print('Вы заплатили', self.ibmoneycount, 'рублей. Теперь ваш инструмент в порядке')
-                if self.ibmoneycount < self.ibmoneyneeded:
+                print('Вы заплатили', self.ibmoneyneeded, 'рублей. Теперь ваш инструмент в порядке')
+            else:
                 self.breakdayscount = self.breakdayscount - 1
                 print('Ваш инструмент починится через',self.breakdayscount, 'дней')
             

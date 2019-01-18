@@ -47,7 +47,7 @@ class Student:
 #            print('У вас каникулы. Вы не можете учиться.')
 
     def study_rehers(self):
-        if studyyear.ib:
+        if self.studyyear.breakdayscount > 0:
             print('У вас же инструмент сломался! Вы не можете репитировать!')
         else:
             self.rehers_count = self.rehers_count + 1
