@@ -8,6 +8,7 @@ class year:
     weeksleft = 0
     weekscount = 3
     breakdayscount = 0
+    sill = randomevent.studentisill()
     ibmoneycount = 0
 #Число денег, выдаваемое студенту, когда инструмент ломается
 
@@ -59,6 +60,8 @@ class year:
                 print('Поскольку ваш инструмент сломался, мы дадим вам возможность его починить. Вам выдали', self.ibmoneycount, 'рублей для этого')
                 self.ibmoneyneeded = random.randint(1, 100)
                 print('За починку вашего инструмента необходимо заплатить', self.ibmoneyneeded, 'рублей')
+                if sill():
+                    print('Вы заболели')
 
         if self.breakdayscount > 0:
             if self.ibmoneycount >= self.ibmoneyneeded:
