@@ -23,3 +23,6 @@ class randomevent:
         if random.random() <= 0.5:
             Return True
     
+    def guestscame():
+        if random.random() <= 0.5:
+            return True

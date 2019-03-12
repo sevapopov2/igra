@@ -62,7 +62,7 @@ class Student:
 #        self.studyyear.quarterending()
 
     def study_knolidge(self):
-        if self.studyyear.holidays == 0:
+        if self.studyyear.holidays == 0 and not randomevent.teacherisill():
             self.study_count = self.study_count + 1
             self.set_tired_level(5)
             if self.tired_level == 0:
